@@ -14,7 +14,7 @@ pipeline{
 
                     gitCheckout(
                         branch: 'main',
-                        repositoryUrl: 'https://github.com/ayush-jsrtia-ust/mrdevops_java_app.git'
+                        url: 'https://github.com/ayush-jsrtia-ust/mrdevops_java_app.git'
                     )
                 }
             }
