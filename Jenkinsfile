@@ -162,5 +162,24 @@ pipeline{
                 }
             }
         }
+
+        stage('DockerHub Login and Push'){
+
+            when {
+                expression { params.action == 'create' }
+            }
+
+            steps{
+
+                script{
+
+                    dockerPush(
+                        "${params.ImageName}",
+                        "${params.ImageTag}",
+                        "${params.DockerHubUser}"
+                    )
+                }
+            }
+        }
     }
 }
