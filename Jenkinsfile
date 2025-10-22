@@ -11,17 +11,17 @@ pipeline{
             choices: 'create\ndelete',
             description: 'Choose create/Destroy'
         )
-        String(
+        string(
             name: 'ImageName',
             description: 'Enter the Image Name',
             defaultValue: 'java_app'
         )
-        String(
+        string(
             name: 'ImageTag',
             description: 'Enter the Image Tag',
             defaultValue: 'v1'
         )
-        String(
+        string(
             name: 'DockerHubUser',
             description: 'Enter the Docker Hub Username',
             defaultValue: 'ayushjsrtia'
