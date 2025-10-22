@@ -73,7 +73,8 @@ pipeline{
 
                 script{
 
-                    staticCodeAnalysis()
+                    def SonarQubecredential = 'sonarqube-api'
+                    staticCodeAnalysis(SonarQubecredential)
                 }
             }
         }
