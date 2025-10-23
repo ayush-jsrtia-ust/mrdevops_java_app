@@ -21,8 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/home")
 public class HomeResource {
 
+	private final PropertiesConfig config;
+
 	@Autowired
-	PropertiesConfig config;
+	public HomeResource(PropertiesConfig config) {
+		this.config = config;
+	}
 
     @GetMapping("/data")
     public ResponseEntity<ResponseData> getData() {
