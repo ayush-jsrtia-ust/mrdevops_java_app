@@ -163,7 +163,7 @@ pipeline{
             }
         }
 
-        stage('DockerHub Login and Push'){
+        stage('ECR Login and Push'){
 
             when {
                 expression { params.action == 'create' }
